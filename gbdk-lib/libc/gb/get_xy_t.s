@@ -7,14 +7,14 @@
 .get_xy_wtt::
 	PUSH	HL		; Store WH
 	LDH	A,(.LCDC)
-	BIT	6,A
+	BIT	1,A
 	JR	Z,.is98
 	JR	.is9c
 	;; Store background tile table into (BC) at XY = DE of size WH = HL
 .get_xy_btt::
 	PUSH	HL		; Store WH
 	LDH	A,(.LCDC)
-	BIT	3,A
+	BIT	4,A
 	JR	NZ,.is9c
 .is98:
 	LD	HL,#0x9800

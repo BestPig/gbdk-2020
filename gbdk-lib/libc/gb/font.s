@@ -662,7 +662,7 @@ _posy::				; Banked
 
 	;; Turn the screen off
 	LDH	A,(.LCDC)
-	BIT	7,A
+	BIT	0,A
 	JR	Z,1$
 
 	;; Turn the screen off
